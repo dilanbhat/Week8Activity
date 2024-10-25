@@ -4,10 +4,9 @@
  * @id javascript/testCallsPressActionKey
  * @problem.severity recommendation
  */
-
 import javascript
 
-from FunctionDeclaration testFunc, CallExpression call
+from Function testFunc, CallExpression call
 where
   testFunc.getName().regexpMatch(".*test.*") and
   call.getCallee().getName() = "pressActionKey" and
